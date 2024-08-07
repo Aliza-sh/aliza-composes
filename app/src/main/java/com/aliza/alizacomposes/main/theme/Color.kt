@@ -1,4 +1,4 @@
-package com.aliza.alizacomposes.ui.theme
+package com.aliza.alizacomposes.main.theme
 
 import androidx.compose.ui.graphics.Color
 

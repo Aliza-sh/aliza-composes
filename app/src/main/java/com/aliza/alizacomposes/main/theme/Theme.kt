@@ -1,6 +1,5 @@
-package com.aliza.alizacomposes.ui.theme
+package com.aliza.alizacomposes.main.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
