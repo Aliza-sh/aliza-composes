@@ -13,6 +13,7 @@ object MockData {
                 1,
                 "Arya",
                 R.drawable.arya_stark,
+                true,
                 true
             )
         )
@@ -21,6 +22,7 @@ object MockData {
                 2,
                 "Bran",
                 R.drawable.bran_stark,
+                true,
                 false
             )
         )
@@ -29,6 +31,7 @@ object MockData {
                 3,
                 "Daenerys",
                 R.drawable.daenerys_targaryen,
+                true,
                 false
             )
         )
@@ -37,6 +40,7 @@ object MockData {
                 4,
                 "Jon",
                 R.drawable.jon_snow,
+                true,
                 false
             )
         )
@@ -45,6 +49,7 @@ object MockData {
                 5,
                 "Jorah",
                 R.drawable.jorah_mormont,
+                true,
                 false
             )
         )
@@ -53,6 +58,7 @@ object MockData {
                 6,
                 "Rob",
                 R.drawable.rob_stark,
+                false,
                 false
             )
         )
@@ -61,6 +67,7 @@ object MockData {
                 6,
                 "Sansa",
                 R.drawable.sansa_stark,
+                false,
                 false
             )
         )
@@ -69,6 +76,7 @@ object MockData {
                 6,
                 "Tyrian",
                 R.drawable.tyrian_lannister,
+                false,
                 false
             )
         )
