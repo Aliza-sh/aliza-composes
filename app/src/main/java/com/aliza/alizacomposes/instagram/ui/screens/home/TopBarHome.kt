@@ -18,7 +18,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -42,7 +41,7 @@ import com.aliza.alizacomposes.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TopBarHome(scrollBehavior: TopAppBarScrollBehavior) {
+fun TopBarHome(scrollBehavior: TopAppBarScrollBehavior, isFirstItemVisible: Boolean) {
 
     val alpha by animateFloatAsState(
         targetValue = 1f - scrollBehavior.state.collapsedFraction,
@@ -60,7 +59,7 @@ fun TopBarHome(scrollBehavior: TopAppBarScrollBehavior) {
             }
         )
 
-        if (scrollBehavior.state.collapsedFraction > 0.01f) {
+        if (scrollBehavior.state.collapsedFraction > 0.01f || !isFirstItemVisible) {
             Spacer(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -110,7 +109,6 @@ fun ActionMassage(alpha: Float) {
                 modifier = Modifier
                     .padding(top = 4.dp, end = 4.dp)
                     .size(24.dp),
-                tint = if (isSystemInDarkTheme()) Color.White else Color.Black
             )
             Text(
                 text = "+9",
