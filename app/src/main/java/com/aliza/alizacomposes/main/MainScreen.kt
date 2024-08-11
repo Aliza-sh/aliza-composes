@@ -3,6 +3,7 @@ package com.aliza.alizacomposes.main
 import android.content.Intent
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -53,9 +54,9 @@ fun BannerApp(item: Apps) {
         }
     ) {
         Image(
-            painter = painterResource(id = item.image),
+            painter = if (isSystemInDarkTheme()) painterResource(id = item.imageDark) else painterResource(id = item.imageLight),
             contentDescription = "",
-            contentScale = ContentScale.Crop,
+            contentScale = ContentScale.Fit,
             modifier = Modifier.fillMaxSize()
         )
     }
