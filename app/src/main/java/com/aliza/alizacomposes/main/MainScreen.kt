@@ -26,7 +26,8 @@ fun MainScreen() {
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 
         val itemApps = listOf<Apps>(
-            Apps.Instagram
+            Apps.Instagram,
+            Apps.Tourism,
         )
 
         LazyVerticalGrid(
