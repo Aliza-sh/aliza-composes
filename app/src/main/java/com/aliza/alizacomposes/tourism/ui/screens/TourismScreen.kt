@@ -11,6 +11,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.aliza.alizacomposes.tourism.ui.components.BottomBar
+import com.aliza.alizacomposes.tourism.ui.screens.home.HomeScreen
 
 @Composable
 fun TourismScreen() {
@@ -36,13 +37,13 @@ fun TourismScreen() {
 }
 
 @Composable
-fun Navigation(navController: NavHostController, modifier: Modifier = Modifier) {
+fun Navigation(navController: NavHostController, modifier: Modifier) {
 
     NavHost(
         navController = navController,
         startDestination = "home",
     ) {
-        composable("home") {}
+        composable("home") {HomeScreen()}
         composable("favorite") {}
         composable("tickets") {}
         composable("reels") {}
