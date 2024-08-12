@@ -20,6 +20,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.aliza.alizacomposes.main.theme.AlizaComposesTheme
+import com.nesyou.staggeredgrid.LazyStaggeredGrid
+import com.nesyou.staggeredgrid.StaggeredCells
 
 @Composable
 fun MainScreen() {
@@ -30,8 +32,8 @@ fun MainScreen() {
             Apps.Tourism,
         )
 
-        LazyVerticalGrid(
-            columns = GridCells.Fixed(2),
+        LazyStaggeredGrid(
+            cells = StaggeredCells.Fixed(2),
             modifier = Modifier.padding(innerPadding)
 
         ) {
