@@ -33,6 +33,10 @@
             android:name=".tourism.TourismActivity"
             android:exported="false"
             android:theme="@style/Theme.AlizaComposes" />
+        <activity
+            android:name=".wallet.WalletActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AlizaComposes" />
     </application>
 
 </manifest>

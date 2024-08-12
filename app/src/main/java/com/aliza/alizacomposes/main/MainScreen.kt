@@ -6,8 +6,6 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
@@ -27,9 +25,10 @@ import com.nesyou.staggeredgrid.StaggeredCells
 fun MainScreen() {
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 
-        val itemApps = listOf<Apps>(
+        val itemApps = listOf(
             Apps.Instagram,
             Apps.Tourism,
+            Apps.Wallet,
         )
 
         LazyStaggeredGrid(
