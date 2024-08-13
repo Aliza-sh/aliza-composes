@@ -12,7 +12,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.aliza.alizacomposes.wallet.data.MockData.cardList
+import com.aliza.alizacomposes.wallet.data.MockData.createRandomFloatList
+import com.aliza.alizacomposes.wallet.data.MockData.months
 import com.aliza.alizacomposes.wallet.ui.components.CardsWidget
+import com.aliza.alizacomposes.wallet.ui.components.ChartActivityWidget
 import com.aliza.alizacomposes.wallet.ui.components.HeaderWidget
 import com.aliza.alizacomposes.wallet.ui.components.TotalBalanceWidget
 
@@ -29,6 +32,7 @@ fun WalletScreen() {
             TotalBalanceWidget()
             Spacer(modifier = Modifier.height(25.dp))
             CardsWidget(cardList = cardList)
+            ChartActivityWidget(createRandomFloatList(), months)
         }
     }
 }
