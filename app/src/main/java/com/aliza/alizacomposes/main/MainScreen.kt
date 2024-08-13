@@ -29,6 +29,7 @@ fun MainScreen() {
             Apps.Instagram,
             Apps.Tourism,
             Apps.Wallet,
+            Apps.IncAndExp,
         )
 
         LazyStaggeredGrid(
