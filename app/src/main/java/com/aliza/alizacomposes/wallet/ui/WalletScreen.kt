@@ -14,6 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.aliza.alizacomposes.wallet.data.MockData.cardList
 import com.aliza.alizacomposes.wallet.ui.components.CardsWidget
 import com.aliza.alizacomposes.wallet.ui.components.HeaderWidget
+import com.aliza.alizacomposes.wallet.ui.components.TotalBalanceWidget
 
 @Composable
 fun WalletScreen() {
@@ -24,6 +25,8 @@ fun WalletScreen() {
                 .padding(innerPadding)
         ) {
             HeaderWidget()
+            Spacer(modifier = Modifier.height(25.dp))
+            TotalBalanceWidget()
             Spacer(modifier = Modifier.height(25.dp))
             CardsWidget(cardList = cardList)
         }
