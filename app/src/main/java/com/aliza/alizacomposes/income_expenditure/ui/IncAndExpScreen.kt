@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.aliza.alizacomposes.income_expenditure.ui.components.FilterWidget
 import com.aliza.alizacomposes.income_expenditure.ui.components.HeaderWidget
+import com.aliza.alizacomposes.income_expenditure.ui.components.MonthlyStatsWidget
 
 @Composable
 fun IncAndExpScreen() {
@@ -24,7 +25,7 @@ fun IncAndExpScreen() {
         ) {
             HeaderWidget()
             FilterWidget(filters)
-
+            MonthlyStatsWidget()
         }
     }
 }
