@@ -4,7 +4,7 @@ import androidx.compose.ui.graphics.Color
 
 val AppPurple = Color(0xFF41234A)
 val Purple80 = Color(0xFFD0BCFF)
-val AppSilver = Color(0xFFF7F6F9)
+val AppSilver = Color(0xFFF0F0F0)
 val AppSilverAlpha = Color(0x80F7F6F9)
 val AppDarkGray = Color(0xFF333333)
 val AppGreen = Color(0xFFEAF9F0)

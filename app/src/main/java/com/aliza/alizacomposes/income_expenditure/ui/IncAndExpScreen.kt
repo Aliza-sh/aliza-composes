@@ -8,10 +8,14 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.aliza.alizacomposes.income_expenditure.ui.components.FilterWidget
 import com.aliza.alizacomposes.income_expenditure.ui.components.HeaderWidget
 
 @Composable
 fun IncAndExpScreen() {
+
+    val filters = listOf("Week", "Month", "Year")
+
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
         Column(
             modifier = Modifier
@@ -19,6 +23,7 @@ fun IncAndExpScreen() {
                 .padding(innerPadding)
         ) {
             HeaderWidget()
+            FilterWidget(filters)
 
         }
     }
