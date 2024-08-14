@@ -8,10 +8,12 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.aliza.alizacomposes.income_expenditure.data.MockData.getTransactionList
 import com.aliza.alizacomposes.income_expenditure.ui.components.EarningSpendingWidget
 import com.aliza.alizacomposes.income_expenditure.ui.components.FilterWidget
 import com.aliza.alizacomposes.income_expenditure.ui.components.HeaderWidget
 import com.aliza.alizacomposes.income_expenditure.ui.components.MonthlyStatsWidget
+import com.aliza.alizacomposes.income_expenditure.ui.components.TransactionListWidget
 
 @Composable
 fun IncAndExpScreen() {
@@ -28,6 +30,7 @@ fun IncAndExpScreen() {
             FilterWidget(filters)
             MonthlyStatsWidget()
             EarningSpendingWidget()
+            TransactionListWidget(getTransactionList())
         }
     }
 }
