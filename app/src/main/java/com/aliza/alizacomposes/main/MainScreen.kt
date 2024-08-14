@@ -30,6 +30,7 @@ fun MainScreen() {
             Apps.Tourism,
             Apps.Wallet,
             Apps.IncAndExp,
+            Apps.MyOs,
         )
 
         LazyStaggeredGrid(

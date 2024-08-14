@@ -41,6 +41,10 @@
             android:name=".income_expenditure.IncAndExpActivity"
             android:exported="false"
             android:theme="@style/Theme.AlizaComposes" />
+        <activity
+            android:name=".my_os.MyOsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AlizaComposes" />
     </application>
 
 </manifest>
