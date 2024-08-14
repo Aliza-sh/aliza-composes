@@ -3,7 +3,7 @@ package com.aliza.alizacomposes.income_expenditure.ui.theme
 import androidx.compose.ui.graphics.Color
 
 val AppPurple = Color(0xFF41234A)
-val Purple40 = Color(0xFF6650a4)
+val Purple80 = Color(0xFFD0BCFF)
 val AppSilver = Color(0xFFF7F6F9)
 val AppSilverAlpha = Color(0x80F7F6F9)
 val AppDarkGray = Color(0xFF333333)

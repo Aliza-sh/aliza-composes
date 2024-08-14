@@ -8,6 +8,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.aliza.alizacomposes.income_expenditure.ui.components.HeaderWidget
 
 @Composable
 fun IncAndExpScreen() {
@@ -17,12 +18,13 @@ fun IncAndExpScreen() {
                 .fillMaxWidth()
                 .padding(innerPadding)
         ) {
+            HeaderWidget()
 
         }
     }
 }
 
-@Preview
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun IncAndExpScreenPrev() {
     IncAndExpScreen()
