@@ -8,6 +8,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.aliza.alizacomposes.my_os.data.MockData
+import com.aliza.alizacomposes.my_os.ui.components.FeatureListGridWidget
 import com.aliza.alizacomposes.my_os.ui.components.FeatureMainWidget
 import com.aliza.alizacomposes.my_os.ui.components.HeaderWidget
 
@@ -21,6 +23,7 @@ fun MyOsScreen() {
         ) {
             HeaderWidget()
             FeatureMainWidget()
+            FeatureListGridWidget(MockData.getFeature())
         }
     }
 }
