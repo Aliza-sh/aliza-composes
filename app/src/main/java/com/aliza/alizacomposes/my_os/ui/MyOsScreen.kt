@@ -8,6 +8,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.aliza.alizacomposes.my_os.ui.components.FeatureMainWidget
 import com.aliza.alizacomposes.my_os.ui.components.HeaderWidget
 
 @Composable
@@ -19,6 +20,7 @@ fun MyOsScreen() {
                 .padding(innerPadding)
         ) {
             HeaderWidget()
+            FeatureMainWidget()
         }
     }
 }
