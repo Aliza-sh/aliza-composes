@@ -102,7 +102,7 @@ fun MoviesTheme(
             val activity  = view.context as Activity
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 activity.window.navigationBarColor =
-                    colorScheme.primary.copy(alpha = 0.08f).compositeOver(colorScheme.surface.copy()).toArgb()
+                    colorScheme.primary.copy(alpha = 0f).compositeOver(AppLightGray.copy()).toArgb()
                 activity.window.statusBarColor = colorScheme.background.toArgb()
                 WindowCompat.getInsetsController(activity.window, view).isAppearanceLightStatusBars = false
                 WindowCompat.getInsetsController(activity.window, view).isAppearanceLightNavigationBars = false

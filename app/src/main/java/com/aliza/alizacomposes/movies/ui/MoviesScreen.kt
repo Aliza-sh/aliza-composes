@@ -8,12 +8,16 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.aliza.alizacomposes.movies.ui.components.BottomBar
 import com.aliza.alizacomposes.movies.ui.components.HeaderApp
 import com.aliza.alizacomposes.movies.ui.components.PopularMovies
 
 @Composable
 fun MoviesScreen() {
-    Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+    Scaffold(
+        bottomBar = { BottomBar()},
+        modifier = Modifier.fillMaxSize()
+    ) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxWidth()
