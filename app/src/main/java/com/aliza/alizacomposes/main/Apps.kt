@@ -4,6 +4,7 @@ import androidx.activity.ComponentActivity
 import com.aliza.alizacomposes.R
 import com.aliza.alizacomposes.income_expenditure.IncAndExpActivity
 import com.aliza.alizacomposes.instagram.InstagramActivity
+import com.aliza.alizacomposes.movies.MoviesActivity
 import com.aliza.alizacomposes.my_os.MyOsActivity
 import com.aliza.alizacomposes.tourism.TourismActivity
 import com.aliza.alizacomposes.wallet.WalletActivity
@@ -14,4 +15,5 @@ sealed class Apps(val imageLight: Int,val imageDark: Int, val activity: Componen
     data object Wallet : Apps(R.drawable.wallet_light,R.drawable.wallet_dark, WalletActivity())
     data object IncAndExp : Apps(R.drawable.inc_light,R.drawable.inc_dark, IncAndExpActivity())
     data object MyOs : Apps(R.drawable.myos_light,R.drawable.myos_dark, MyOsActivity())
+    data object Movies : Apps(R.drawable.movies,R.drawable.movies, MoviesActivity())
 }
