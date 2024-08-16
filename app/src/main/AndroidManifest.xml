@@ -49,6 +49,10 @@
             android:name=".movies.MoviesActivity"
             android:exported="false"
             android:theme="@style/Theme.AlizaComposes" />
+        <activity
+            android:name=".vpn.VpnActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AlizaComposes" />
     </application>
 
 </manifest>
