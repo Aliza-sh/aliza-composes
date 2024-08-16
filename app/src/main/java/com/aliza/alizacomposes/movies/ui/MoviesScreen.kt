@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.aliza.alizacomposes.movies.ui.components.HeaderApp
+import com.aliza.alizacomposes.movies.ui.components.PopularMovies
 
 @Composable
 fun MoviesScreen() {
@@ -19,6 +20,7 @@ fun MoviesScreen() {
                 .padding(innerPadding)
         ) {
             HeaderApp()
+            PopularMovies()
         }
     }
 }
