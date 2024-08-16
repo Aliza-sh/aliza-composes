@@ -15,11 +15,12 @@ fun HeaderApp() {
     Box(modifier = Modifier.fillMaxWidth()) {
         HeaderSlider(listSlider)
         HeaderFilter(filters, modifier = Modifier.align(Alignment.TopCenter))
+        HeaderSliderTitle(modifier = Modifier.align(Alignment.BottomCenter))
     }
 }
 
 @Preview
 @Composable
-fun HeaderAppPrev(modifier: Modifier = Modifier) {
+fun HeaderAppPrev() {
     HeaderApp()
 }
