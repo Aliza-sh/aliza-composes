@@ -1,6 +1,7 @@
 package com.aliza.alizacomposes.movies.data
 
 import com.aliza.alizacomposes.R
+import com.aliza.alizacomposes.movies.model.Movie
 import com.aliza.alizacomposes.movies.model.Slider
 
 class MockData {
@@ -13,6 +14,19 @@ class MockData {
         )
         fun getSliderList(): List<Slider> {
             return sliderList
+        }
+
+        private val moviesList = listOf(
+            Movie(R.drawable.movie_1, 9.4f),
+            Movie(R.drawable.movie_2, 8.4f),
+            Movie(R.drawable.movie_3, 9.3f),
+            Movie(R.drawable.movie_4, 8.8f),
+            Movie(R.drawable.movie_5, 9.7f),
+            Movie(R.drawable.movie_6, 9.1f),
+            Movie(R.drawable.movie_7, 8.2f)
+        )
+        fun getMoviesList(): List<Movie> {
+            return moviesList
         }
     }
 }
