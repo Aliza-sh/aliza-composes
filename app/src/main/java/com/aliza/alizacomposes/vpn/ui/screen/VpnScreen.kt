@@ -16,6 +16,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.aliza.alizacomposes.vpn.ui.screen.home.HomeScreen
 import com.aliza.alizacomposes.vpn.ui.screen.login.LoginScreen
 
 @Composable
@@ -34,41 +35,12 @@ fun Navigation(navController: NavHostController) {
     NavHost(
         navController = navController,
         startDestination = "login",
-        enterTransition = {
-            slideInHorizontally(
-                initialOffsetX = { +1000 },
-                animationSpec = tween(700)
-            ) + fadeIn(
-                animationSpec = tween(700)
-            )
-        },
-        exitTransition = {
-            slideOutHorizontally(
-                targetOffsetX = { -1000 },
-                animationSpec = tween(700)
-            ) + fadeOut(
-                animationSpec = tween(700)
-            )
-        },
-        popEnterTransition = {
-            slideInHorizontally(
-                initialOffsetX = { -1000 },
-                animationSpec = tween(700)
-            ) + fadeIn(
-                animationSpec = tween(700)
-            )
-        },
-        popExitTransition = {
-            slideOutHorizontally(
-                targetOffsetX = { +1000 },
-                animationSpec = tween(700)
-            ) + fadeOut(
-                animationSpec = tween(700)
-            )
-        }
     ) {
         composable("login") {
             LoginScreen(navController)
+        }
+        composable("home") {
+            HomeScreen(navController)
         }
     }
 }

@@ -66,6 +66,7 @@ fun LoginScreen(navController: NavHostController) {
                 login = true
                 Handler(Looper.getMainLooper()).postDelayed({
                     login = false
+                    navController.navigate("home")
                 }, 5000)
             },
             loading = login,
