@@ -45,6 +45,10 @@
             android:name=".my_os.MyOsActivity"
             android:exported="false"
             android:theme="@style/Theme.AlizaComposes" />
+        <activity
+            android:name=".movies.MoviesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AlizaComposes" />
     </application>
 
 </manifest>
