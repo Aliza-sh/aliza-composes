@@ -3,10 +3,14 @@ package com.aliza.alizacomposes.movies.ui.theme
 import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material.ripple.LocalRippleTheme
+import androidx.compose.material.ripple.RippleAlpha
+import androidx.compose.material.ripple.RippleTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.compositeOver
@@ -70,6 +74,21 @@ private val Typography = Typography(
     )
 )
 
+private object JetNewsRippleTheme : RippleTheme {
+    // Here you should return the ripple color you want
+    // and not use the defaultRippleColor extension on RippleTheme.
+    // Using that will override the ripple color set in DarkMode
+    // or when you set light parameter to false
+    @Composable
+    override fun defaultColor(): Color = AppRed
+
+    @Composable
+    override fun rippleAlpha(): RippleAlpha = RippleTheme.defaultRippleAlpha(
+        AppRed,
+        lightTheme = !isSystemInDarkTheme()
+    )
+}
+
 @Composable
 fun MoviesTheme(
     content: @Composable () -> Unit
@@ -94,6 +113,10 @@ fun MoviesTheme(
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,
-        content = content
-    )
+    ){
+        CompositionLocalProvider(
+            LocalRippleTheme provides JetNewsRippleTheme,
+            content = content
+        )
+    }
 }
