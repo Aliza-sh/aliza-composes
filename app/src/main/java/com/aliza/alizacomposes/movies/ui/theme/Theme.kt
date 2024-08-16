@@ -1,15 +1,23 @@
 package com.aliza.alizacomposes.movies.ui.theme
 
+import android.app.Activity
+import android.os.Build
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.compositeOver
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import androidx.core.view.WindowCompat
 import com.aliza.alizacomposes.R
 
 private val DarkColorScheme =
@@ -67,6 +75,21 @@ fun MoviesTheme(
     content: @Composable () -> Unit
 ) {
     val colorScheme = DarkColorScheme
+
+    //Applying changes to the status bars
+    val view = LocalView.current
+    if (!view.isInEditMode) {
+        SideEffect {
+            val activity  = view.context as Activity
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                activity.window.navigationBarColor =
+                    colorScheme.primary.copy(alpha = 0.08f).compositeOver(colorScheme.surface.copy()).toArgb()
+                activity.window.statusBarColor = colorScheme.background.toArgb()
+                WindowCompat.getInsetsController(activity.window, view).isAppearanceLightStatusBars = false
+                WindowCompat.getInsetsController(activity.window, view).isAppearanceLightNavigationBars = false
+            }
+        }
+    }
 
     MaterialTheme(
         colorScheme = colorScheme,
