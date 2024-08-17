@@ -22,6 +22,7 @@ fun HomeScreen(navController: NavHostController) {
         HeaderMenu(){
             navController.popBackStack()
         }
+        ConnectionButton()
 
     }
 }
