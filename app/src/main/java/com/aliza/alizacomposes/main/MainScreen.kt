@@ -33,6 +33,7 @@ fun MainScreen() {
             Apps.MyOs,
             Apps.Movies,
             Apps.Vpn,
+            Apps.Shoes,
         )
 
         LazyStaggeredGrid(
