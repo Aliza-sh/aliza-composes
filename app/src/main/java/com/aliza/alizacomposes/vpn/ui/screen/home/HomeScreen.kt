@@ -19,6 +19,9 @@ fun HomeScreen(navController: NavHostController) {
             .fillMaxSize()
             .background(Brush.linearGradient(listOf(Black, NavyBlue)))
     ) {
+        HeaderMenu(){
+            navController.popBackStack()
+        }
 
     }
 }
