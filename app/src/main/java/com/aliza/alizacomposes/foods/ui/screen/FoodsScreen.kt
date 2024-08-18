@@ -24,6 +24,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.aliza.alizacomposes.foods.ui.component.BottomBar
+import com.aliza.alizacomposes.foods.ui.screen.chat.ChatScreen
 import com.aliza.alizacomposes.foods.ui.screen.home.HomeScreen
 import com.aliza.alizacomposes.foods.ui.utils.NavigationItem
 
@@ -90,15 +91,11 @@ fun Navigation(navController: NavHostController, modifier: Modifier = Modifier) 
                     slideInHorizontally(
                         initialOffsetX = { -1000 },
                         animationSpec = tween(700)
-                    ) + fadeIn(
-                        animationSpec = tween(700)
                     )
                 }
             } else
                 slideInHorizontally(
                     initialOffsetX = { 1000 },
-                    animationSpec = tween(700)
-                ) + fadeIn(
                     animationSpec = tween(700)
                 )
 
@@ -116,15 +113,11 @@ fun Navigation(navController: NavHostController, modifier: Modifier = Modifier) 
                     slideOutHorizontally(
                         targetOffsetX = { 1000 },
                         animationSpec = tween(700)
-                    ) + fadeOut(
-                        animationSpec = tween(700)
                     )
                 }
             } else
                 slideOutHorizontally(
                     targetOffsetX = { -1000 },
-                    animationSpec = tween(700)
-                ) + fadeOut(
                     animationSpec = tween(700)
                 )
         }
@@ -132,6 +125,12 @@ fun Navigation(navController: NavHostController, modifier: Modifier = Modifier) 
         composable("home") {
             HomeScreen()
         }
+        composable("basket") {}
+        composable("chat") {
+            ChatScreen()
+        }
+        composable("explore") {}
+        composable("search") {}
     }
 }
 
