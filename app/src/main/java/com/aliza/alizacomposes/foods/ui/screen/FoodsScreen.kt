@@ -54,7 +54,7 @@ fun Navigation(navController: NavHostController, modifier: Modifier = Modifier) 
     // Variable to hold the previous and current route
     var previousRoute by remember { mutableStateOf<String?>(null) }
     val currentBackStackEntry by navController.currentBackStackEntryAsState()
-    val currentRoute = currentBackStackEntry?.destination?.route
+    var currentRoute = currentBackStackEntry?.destination?.route
 
     // Detect changes in the current route
     LaunchedEffect(currentRoute) {
@@ -68,12 +68,24 @@ fun Navigation(navController: NavHostController, modifier: Modifier = Modifier) 
 
     var previousId = menu.find { it.route == previousRoute }?.id
     var currentId = menu.find { it.route == currentRoute }?.id
+
+    if (previousRoute == "home" && currentId != null) {
+        previousId = 3
+        if (currentId.toInt() >= 3)
+            currentId -= 1
+        else
+            currentId += 1
+    }
+    if (currentRoute == "home" && previousId != null) {
+        currentId = 3
+        if (previousId.toInt() >= 3)
+            previousId -= 1
+        else
+            previousId += 1
+    }
+
     Log.e("TAGsd", "Previous ID: $previousId, Current Id: $currentId")
 
-    if (previousRoute == "home")
-        previousId = 3
-    if (currentRoute == "home")
-        currentId = 3
 
     NavHost(
         navController = navController,
@@ -91,11 +103,15 @@ fun Navigation(navController: NavHostController, modifier: Modifier = Modifier) 
                     slideInHorizontally(
                         initialOffsetX = { -1000 },
                         animationSpec = tween(700)
+                    ) + fadeIn(
+                        animationSpec = tween(700)
                     )
                 }
             } else
                 slideInHorizontally(
                     initialOffsetX = { 1000 },
+                    animationSpec = tween(700)
+                ) + fadeIn(
                     animationSpec = tween(700)
                 )
 
@@ -113,11 +129,15 @@ fun Navigation(navController: NavHostController, modifier: Modifier = Modifier) 
                     slideOutHorizontally(
                         targetOffsetX = { 1000 },
                         animationSpec = tween(700)
+                    ) + fadeOut(
+                        animationSpec = tween(700)
                     )
                 }
             } else
                 slideOutHorizontally(
                     targetOffsetX = { -1000 },
+                    animationSpec = tween(700)
+                ) + fadeOut(
                     animationSpec = tween(700)
                 )
         }
