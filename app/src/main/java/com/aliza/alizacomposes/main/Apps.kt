@@ -2,6 +2,7 @@ package com.aliza.alizacomposes.main
 
 import androidx.activity.ComponentActivity
 import com.aliza.alizacomposes.R
+import com.aliza.alizacomposes.foods.FoodsActivity
 import com.aliza.alizacomposes.income_expenditure.IncAndExpActivity
 import com.aliza.alizacomposes.instagram.InstagramActivity
 import com.aliza.alizacomposes.movies.MoviesActivity
@@ -20,4 +21,5 @@ sealed class Apps(val imageLight: Int,val imageDark: Int, val activity: Componen
     data object Movies : Apps(R.drawable.movies,R.drawable.movies, MoviesActivity())
     data object Vpn : Apps(R.drawable.vpn,R.drawable.vpn, VpnActivity())
     data object Shoes : Apps(R.drawable.shoes,R.drawable.shoes, ShoesActivity())
+    data object Foods : Apps(R.drawable.img_samplebanner,R.drawable.img_samplebanner, FoodsActivity())
 }
