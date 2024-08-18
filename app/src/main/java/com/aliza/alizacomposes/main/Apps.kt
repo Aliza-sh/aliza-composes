@@ -21,5 +21,5 @@ sealed class Apps(val imageLight: Int,val imageDark: Int, val activity: Componen
     data object Movies : Apps(R.drawable.movies,R.drawable.movies, MoviesActivity())
     data object Vpn : Apps(R.drawable.vpn,R.drawable.vpn, VpnActivity())
     data object Shoes : Apps(R.drawable.shoes,R.drawable.shoes, ShoesActivity())
-    data object Foods : Apps(R.drawable.img_samplebanner,R.drawable.img_samplebanner, FoodsActivity())
+    data object Foods : Apps(R.drawable.foods_light,R.drawable.foods_dark, FoodsActivity())
 }
