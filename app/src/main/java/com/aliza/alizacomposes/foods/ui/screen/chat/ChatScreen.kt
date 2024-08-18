@@ -15,6 +15,7 @@ fun ChatScreen(modifier: Modifier = Modifier) {
     Column(modifier = Modifier.fillMaxSize().padding(bottom = 118.dp)) {
         HeaderWidget()
         ChatsWidget(modifier = Modifier.weight(1f),chatList = chatList)
+        SendBoxWidget()
     }
 }
 
