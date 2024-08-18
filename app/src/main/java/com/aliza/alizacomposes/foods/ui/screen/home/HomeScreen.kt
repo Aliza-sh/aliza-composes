@@ -32,6 +32,8 @@ fun HomeScreen() {
             ),
             modifier = Modifier.padding(horizontal = 25.dp)
         )
+        Spacer(modifier = Modifier.height(10.dp))
+        SearchWidget()
     }
 }
 
