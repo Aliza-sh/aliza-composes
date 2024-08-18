@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -16,9 +15,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aliza.alizacomposes.R
+import com.aliza.alizacomposes.foods.data.MockData.Companion.getFilterList
 
 @Composable
 fun HomeScreen() {
+    val filterList = getFilterList()
     Column {
         Spacer(modifier = Modifier.height(24.dp))
         HeaderWidget()
@@ -34,6 +35,9 @@ fun HomeScreen() {
         )
         Spacer(modifier = Modifier.height(10.dp))
         SearchWidget()
+        Spacer(modifier = Modifier.height(20.dp))
+        FilterWidget(filterList = filterList)
+
     }
 }
 
